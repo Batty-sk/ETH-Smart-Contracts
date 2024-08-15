@@ -1,0 +1,752 @@
+{
+    "contractName": "LocalContract",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "Funders",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "name",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "ethDonated",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LocalContract.FUNDERS[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "senderName",
+                    "type": "string"
+                }
+            ],
+            "name": "PayMe",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "funders",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "ethDonated",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "whoIsOwner",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"Funders\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"ethDonated\",\"type\":\"uint256\"}],\"internalType\":\"struct LocalContract.FUNDERS[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"senderName\",\"type\":\"string\"}],\"name\":\"PayMe\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"funders\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"ethDonated\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"whoIsOwner\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"d:/Eth SmartContract/localcontract.sol\":\"LocalContract\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"d:/Eth SmartContract/localcontract.sol\":{\"keccak256\":\"0xcca1e2ba5893ce280ba26df52a5d79a6e083a161bcf61f9424d77c5016162729\",\"urls\":[\"bzz-raw://aaf3d1b113c8f5cf183ccdfadb9f344b287ec02f54fe2a969d9422098522dfc2\",\"dweb:/ipfs/QmUZGdgWCtpizbrsayLvtGCcNXdb67FGMeA2usrwKpQGWP\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b50610658806100206000396000f3fe60806040526004361061003f5760003560e01c8063870603b8146100445780639ed492f21461006f5780639ee1bd0f14610084578063dc0d3dff146100b5575b600080fd5b34801561005057600080fd5b506100596100e3565b6040516100669190610347565b60405180910390f35b61008261007d3660046103d3565b6101de565b005b34801561009057600080fd5b506040805180820182526002815261736b60f01b602082015290516100669190610484565b3480156100c157600080fd5b506100d56100d036600461049e565b610245565b6040516100669291906104b7565b60606000805480602002602001604051908101604052809291908181526020016000905b828210156101d5578382906000526020600020906002020160405180604001604052908160008201805461013a906104d9565b80601f0160208091040260200160405190810160405280929190818152602001828054610166906104d9565b80156101b35780601f10610188576101008083540402835291602001916101b3565b820191906000526020600020905b81548152906001019060200180831161019657829003601f168201915b5050505050815260200160018201548152505081526020019060010190610107565b50505050905090565b6040805180820190915281815234602082015260008054600181018255908052815182916002027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563019081906102349082610562565b506020820151816001015550505050565b6000818154811061025557600080fd5b9060005260206000209060020201600091509050806000018054610278906104d9565b80601f01602080910402602001604051908101604052809291908181526020018280546102a4906104d9565b80156102f15780601f106102c6576101008083540402835291602001916102f1565b820191906000526020600020905b8154815290600101906020018083116102d457829003601f168201915b5050505050908060010154905082565b6000815180845260005b818110156103275760208185018101518683018201520161030b565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b838110156103af57888303603f190185528151805187855261039288860182610301565b91890151948901949094529487019492509086019060010161036e565b509098975050505050505050565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156103e557600080fd5b813567ffffffffffffffff808211156103fd57600080fd5b818401915084601f83011261041157600080fd5b813581811115610423576104236103bd565b604051601f8201601f19908116603f0116810190838211818310171561044b5761044b6103bd565b8160405282815287602084870101111561046457600080fd5b826020860160208301376000928101602001929092525095945050505050565b6020815260006104976020830184610301565b9392505050565b6000602082840312156104b057600080fd5b5035919050565b6040815260006104ca6040830185610301565b90508260208301529392505050565b600181811c908216806104ed57607f821691505b60208210810361050d57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561055d57600081815260208120601f850160051c8101602086101561053a5750805b601f850160051c820191505b8181101561055957828155600101610546565b5050505b505050565b815167ffffffffffffffff81111561057c5761057c6103bd565b6105908161058a84546104d9565b84610513565b602080601f8311600181146105c557600084156105ad5750858301515b600019600386901b1c1916600185901b178555610559565b600085815260208120601f198616915b828110156105f4578886015182559484019460019091019084016105d5565b50858210156106125787850151600019600388901b60f8161c191681555b5050505050600190811b0190555056fea26469706673582212207376fd00409a68bfa14c49d0cd2d6f12e79a33a5367e37d2e3ae50821492a84464736f6c63430008130033",
+    "deployedBytecode": "60806040526004361061003f5760003560e01c8063870603b8146100445780639ed492f21461006f5780639ee1bd0f14610084578063dc0d3dff146100b5575b600080fd5b34801561005057600080fd5b506100596100e3565b6040516100669190610347565b60405180910390f35b61008261007d3660046103d3565b6101de565b005b34801561009057600080fd5b506040805180820182526002815261736b60f01b602082015290516100669190610484565b3480156100c157600080fd5b506100d56100d036600461049e565b610245565b6040516100669291906104b7565b60606000805480602002602001604051908101604052809291908181526020016000905b828210156101d5578382906000526020600020906002020160405180604001604052908160008201805461013a906104d9565b80601f0160208091040260200160405190810160405280929190818152602001828054610166906104d9565b80156101b35780601f10610188576101008083540402835291602001916101b3565b820191906000526020600020905b81548152906001019060200180831161019657829003601f168201915b5050505050815260200160018201548152505081526020019060010190610107565b50505050905090565b6040805180820190915281815234602082015260008054600181018255908052815182916002027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563019081906102349082610562565b506020820151816001015550505050565b6000818154811061025557600080fd5b9060005260206000209060020201600091509050806000018054610278906104d9565b80601f01602080910402602001604051908101604052809291908181526020018280546102a4906104d9565b80156102f15780601f106102c6576101008083540402835291602001916102f1565b820191906000526020600020905b8154815290600101906020018083116102d457829003601f168201915b5050505050908060010154905082565b6000815180845260005b818110156103275760208185018101518683018201520161030b565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b838110156103af57888303603f190185528151805187855261039288860182610301565b91890151948901949094529487019492509086019060010161036e565b509098975050505050505050565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156103e557600080fd5b813567ffffffffffffffff808211156103fd57600080fd5b818401915084601f83011261041157600080fd5b813581811115610423576104236103bd565b604051601f8201601f19908116603f0116810190838211818310171561044b5761044b6103bd565b8160405282815287602084870101111561046457600080fd5b826020860160208301376000928101602001929092525095945050505050565b6020815260006104976020830184610301565b9392505050565b6000602082840312156104b057600080fd5b5035919050565b6040815260006104ca6040830185610301565b90508260208301529392505050565b600181811c908216806104ed57607f821691505b60208210810361050d57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561055d57600081815260208120601f850160051c8101602086101561053a5750805b601f850160051c820191505b8181101561055957828155600101610546565b5050505b505050565b815167ffffffffffffffff81111561057c5761057c6103bd565b6105908161058a84546104d9565b84610513565b602080601f8311600181146105c557600084156105ad5750858301515b600019600386901b1c1916600185901b178555610559565b600085815260208120601f198616915b828110156105f4578886015182559484019460019091019084016105d5565b50858210156106125787850151600019600388901b60f8161c191681555b5050505050600190811b0190555056fea26469706673582212207376fd00409a68bfa14c49d0cd2d6f12e79a33a5367e37d2e3ae50821492a84464736f6c63430008130033",
+    "sourceMap": "27:631:0:-:0;;;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "27:631:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;547:100;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;311:228;;;;;;:::i;:::-;;:::i;:::-;;208:95;;;;;;;;;;-1:-1:-1;290:5:0;;;;;;;;;;;-1:-1:-1;;;290:5:0;;;;208:95;;;;290:5;208:95;:::i;175:24::-;;;;;;;;;;-1:-1:-1;175:24:0;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;547:100::-;587:16;632:7;625:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;547:100;:::o;311:228::-;413:87;;;;;;;;;;;;479:9;413:87;;;;388:21;511:20;;;;;;;;;;;;413:87;;511:20;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;367:172;311:228;:::o;175:24::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;14:423:1:-;56:3;94:5;88:12;121:6;116:3;109:19;146:1;156:162;170:6;167:1;164:13;156:162;;;232:4;288:13;;;284:22;;278:29;260:11;;;256:20;;249:59;185:12;156:162;;;160:3;363:1;356:4;347:6;342:3;338:16;334:27;327:38;426:4;419:2;415:7;410:2;402:6;398:15;394:29;389:3;385:39;381:50;374:57;;;14:423;;;;:::o;442:1054::-;628:4;657:2;697;686:9;682:18;727:2;716:9;709:21;750:6;785;779:13;816:6;808;801:22;842:2;832:12;;875:2;864:9;860:18;853:25;;937:2;927:6;924:1;920:14;909:9;905:30;901:39;975:2;967:6;963:15;996:1;1006:461;1020:6;1017:1;1014:13;1006:461;;;1085:22;;;-1:-1:-1;;1081:36:1;1069:49;;1141:13;;1187:9;;1209:18;;;1254:48;1286:15;;;1187:9;1254:48;:::i;:::-;1345:11;;;1339:18;1322:15;;;1315:43;;;;1445:12;;;;1240:62;-1:-1:-1;1410:15:1;;;;1042:1;1035:9;1006:461;;;-1:-1:-1;1484:6:1;;442:1054;-1:-1:-1;;;;;;;;442:1054:1:o;1501:127::-;1562:10;1557:3;1553:20;1550:1;1543:31;1593:4;1590:1;1583:15;1617:4;1614:1;1607:15;1633:922;1702:6;1755:2;1743:9;1734:7;1730:23;1726:32;1723:52;;;1771:1;1768;1761:12;1723:52;1811:9;1798:23;1840:18;1881:2;1873:6;1870:14;1867:34;;;1897:1;1894;1887:12;1867:34;1935:6;1924:9;1920:22;1910:32;;1980:7;1973:4;1969:2;1965:13;1961:27;1951:55;;2002:1;1999;1992:12;1951:55;2038:2;2025:16;2060:2;2056;2053:10;2050:36;;;2066:18;;:::i;:::-;2141:2;2135:9;2109:2;2195:13;;-1:-1:-1;;2191:22:1;;;2215:2;2187:31;2183:40;2171:53;;;2239:18;;;2259:22;;;2236:46;2233:72;;;2285:18;;:::i;:::-;2325:10;2321:2;2314:22;2360:2;2352:6;2345:18;2400:7;2395:2;2390;2386;2382:11;2378:20;2375:33;2372:53;;;2421:1;2418;2411:12;2372:53;2477:2;2472;2468;2464:11;2459:2;2451:6;2447:15;2434:46;2522:1;2500:15;;;2517:2;2496:24;2489:35;;;;-1:-1:-1;2504:6:1;1633:922;-1:-1:-1;;;;;1633:922:1:o;2560:220::-;2709:2;2698:9;2691:21;2672:4;2729:45;2770:2;2759:9;2755:18;2747:6;2729:45;:::i;:::-;2721:53;2560:220;-1:-1:-1;;;2560:220:1:o;2785:180::-;2844:6;2897:2;2885:9;2876:7;2872:23;2868:32;2865:52;;;2913:1;2910;2903:12;2865:52;-1:-1:-1;2936:23:1;;2785:180;-1:-1:-1;2785:180:1:o;2970:291::-;3147:2;3136:9;3129:21;3110:4;3167:45;3208:2;3197:9;3193:18;3185:6;3167:45;:::i;:::-;3159:53;;3248:6;3243:2;3232:9;3228:18;3221:34;2970:291;;;;;:::o;3266:380::-;3345:1;3341:12;;;;3388;;;3409:61;;3463:4;3455:6;3451:17;3441:27;;3409:61;3516:2;3508:6;3505:14;3485:18;3482:38;3479:161;;3562:10;3557:3;3553:20;3550:1;3543:31;3597:4;3594:1;3587:15;3625:4;3622:1;3615:15;3479:161;;3266:380;;;:::o;3777:545::-;3879:2;3874:3;3871:11;3868:448;;;3915:1;3940:5;3936:2;3929:17;3985:4;3981:2;3971:19;4055:2;4043:10;4039:19;4036:1;4032:27;4026:4;4022:38;4091:4;4079:10;4076:20;4073:47;;;-1:-1:-1;4114:4:1;4073:47;4169:2;4164:3;4160:12;4157:1;4153:20;4147:4;4143:31;4133:41;;4224:82;4242:2;4235:5;4232:13;4224:82;;;4287:17;;;4268:1;4257:13;4224:82;;;4228:3;;;3868:448;3777:545;;;:::o;4498:1352::-;4624:3;4618:10;4651:18;4643:6;4640:30;4637:56;;;4673:18;;:::i;:::-;4702:97;4792:6;4752:38;4784:4;4778:11;4752:38;:::i;:::-;4746:4;4702:97;:::i;:::-;4854:4;;4918:2;4907:14;;4935:1;4930:663;;;;5637:1;5654:6;5651:89;;;-1:-1:-1;5706:19:1;;;5700:26;5651:89;-1:-1:-1;;4455:1:1;4451:11;;;4447:24;4443:29;4433:40;4479:1;4475:11;;;4430:57;5753:81;;4900:944;;4930:663;3724:1;3717:14;;;3761:4;3748:18;;-1:-1:-1;;4966:20:1;;;5084:236;5098:7;5095:1;5092:14;5084:236;;;5187:19;;;5181:26;5166:42;;5279:27;;;;5247:1;5235:14;;;;5114:19;;5084:236;;;5088:3;5348:6;5339:7;5336:19;5333:201;;;5409:19;;;5403:26;-1:-1:-1;;5492:1:1;5488:14;;;5504:3;5484:24;5480:37;5476:42;5461:58;5446:74;;5333:201;-1:-1:-1;;;;;5580:1:1;5564:14;;;5560:22;5547:36;;-1:-1:-1;4498:1352:1:o",
+    "sourcePath": "d:/Eth SmartContract/localcontract.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.19+commit.7dd6d404"
+    },
+    "ast": {
+        "absolutePath": "d:/Eth SmartContract/localcontract.sol",
+        "exportedSymbols": {
+            "LocalContract": [
+                53
+            ]
+        },
+        "id": 54,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "LocalContract",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 53,
+                "linearizedBaseContracts": [
+                    53
+                ],
+                "name": "LocalContract",
+                "nameLocation": "36:13:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": true,
+                        "id": 4,
+                        "mutability": "constant",
+                        "name": "OWNER",
+                        "nameLocation": "80:5:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 53,
+                        "src": "56:36:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string"
+                        },
+                        "typeName": {
+                            "id": 2,
+                            "name": "string",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "56:6:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage_ptr",
+                                "typeString": "string"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "736b",
+                            "id": 3,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "88:4:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_8c9c399f3a756a7a20b1c7f6569bbc0fab4533dae2d0d1a4748decd1e8a6ef19",
+                                "typeString": "literal_string \"sk\""
+                            },
+                            "value": "sk"
+                        },
+                        "visibility": "private"
+                    },
+                    {
+                        "canonicalName": "LocalContract.FUNDERS",
+                        "id": 9,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 6,
+                                "mutability": "mutable",
+                                "name": "name",
+                                "nameLocation": "131:4:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 9,
+                                "src": "124:11:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 5,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "124:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 8,
+                                "mutability": "mutable",
+                                "name": "ethDonated",
+                                "nameLocation": "151:10:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 9,
+                                "src": "146:15:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 7,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "146:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "FUNDERS",
+                        "nameLocation": "106:7:0",
+                        "nodeType": "StructDefinition",
+                        "scope": 53,
+                        "src": "99:70:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "dc0d3dff",
+                        "id": 13,
+                        "mutability": "mutable",
+                        "name": "funders",
+                        "nameLocation": "192:7:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 53,
+                        "src": "175:24:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage",
+                            "typeString": "struct LocalContract.FUNDERS[]"
+                        },
+                        "typeName": {
+                            "baseType": {
+                                "id": 11,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 10,
+                                    "name": "FUNDERS",
+                                    "nameLocations": [
+                                        "175:7:0"
+                                    ],
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 9,
+                                    "src": "175:7:0"
+                                },
+                                "referencedDeclaration": 9,
+                                "src": "175:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FUNDERS_$9_storage_ptr",
+                                    "typeString": "struct LocalContract.FUNDERS"
+                                }
+                            },
+                            "id": 12,
+                            "nodeType": "ArrayTypeName",
+                            "src": "175:9:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage_ptr",
+                                "typeString": "struct LocalContract.FUNDERS[]"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 20,
+                            "nodeType": "Block",
+                            "src": "266:37:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 18,
+                                        "name": "OWNER",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 4,
+                                        "src": "290:5:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_memory_ptr",
+                                            "typeString": "string memory"
+                                        }
+                                    },
+                                    "functionReturnParameters": 17,
+                                    "id": 19,
+                                    "nodeType": "Return",
+                                    "src": "283:12:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "9ee1bd0f",
+                        "id": 21,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "whoIsOwner",
+                        "nameLocation": "217:10:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 14,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "228:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 17,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 16,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 21,
+                                    "src": "251:13:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 15,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "251:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "250:15:0"
+                        },
+                        "scope": 53,
+                        "src": "208:95:0",
+                        "stateMutability": "pure",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 41,
+                            "nodeType": "Block",
+                            "src": "367:172:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        28
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 28,
+                                            "mutability": "mutable",
+                                            "name": "funder",
+                                            "nameLocation": "403:6:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 41,
+                                            "src": "388:21:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_FUNDERS_$9_memory_ptr",
+                                                "typeString": "struct LocalContract.FUNDERS"
+                                            },
+                                            "typeName": {
+                                                "id": 27,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 26,
+                                                    "name": "FUNDERS",
+                                                    "nameLocations": [
+                                                        "388:7:0"
+                                                    ],
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 9,
+                                                    "src": "388:7:0"
+                                                },
+                                                "referencedDeclaration": 9,
+                                                "src": "388:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_FUNDERS_$9_storage_ptr",
+                                                    "typeString": "struct LocalContract.FUNDERS"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 34,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "id": 30,
+                                                "name": "senderName",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 23,
+                                                "src": "442:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 31,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "479:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 32,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "483:5:0",
+                                                "memberName": "value",
+                                                "nodeType": "MemberAccess",
+                                                "src": "479:9:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "id": 29,
+                                            "name": "FUNDERS",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 9,
+                                            "src": "413:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_type$_t_struct$_FUNDERS_$9_storage_ptr_$",
+                                                "typeString": "type(struct LocalContract.FUNDERS storage pointer)"
+                                            }
+                                        },
+                                        "id": 33,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "structConstructorCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [
+                                            "436:4:0",
+                                            "467:10:0"
+                                        ],
+                                        "names": [
+                                            "name",
+                                            "ethDonated"
+                                        ],
+                                        "nodeType": "FunctionCall",
+                                        "src": "413:87:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_FUNDERS_$9_memory_ptr",
+                                            "typeString": "struct LocalContract.FUNDERS memory"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "388:112:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 38,
+                                                "name": "funder",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 28,
+                                                "src": "524:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_FUNDERS_$9_memory_ptr",
+                                                    "typeString": "struct LocalContract.FUNDERS memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_FUNDERS_$9_memory_ptr",
+                                                    "typeString": "struct LocalContract.FUNDERS memory"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 35,
+                                                "name": "funders",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 13,
+                                                "src": "511:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage",
+                                                    "typeString": "struct LocalContract.FUNDERS storage ref[] storage ref"
+                                                }
+                                            },
+                                            "id": 37,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "519:4:0",
+                                            "memberName": "push",
+                                            "nodeType": "MemberAccess",
+                                            "src": "511:12:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage_ptr_$_t_struct$_FUNDERS_$9_storage_$returns$__$attached_to$_t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage_ptr_$",
+                                                "typeString": "function (struct LocalContract.FUNDERS storage ref[] storage pointer,struct LocalContract.FUNDERS storage ref)"
+                                            }
+                                        },
+                                        "id": 39,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "511:20:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 40,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "511:20:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "9ed492f2",
+                        "id": 42,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "PayMe",
+                        "nameLocation": "320:5:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 24,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 23,
+                                    "mutability": "mutable",
+                                    "name": "senderName",
+                                    "nameLocation": "341:10:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 42,
+                                    "src": "327:24:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 22,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "327:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "326:26:0"
+                        },
+                        "returnParameters": {
+                            "id": 25,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "367:0:0"
+                        },
+                        "scope": 53,
+                        "src": "311:228:0",
+                        "stateMutability": "payable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 51,
+                            "nodeType": "Block",
+                            "src": "604:43:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 49,
+                                        "name": "funders",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 13,
+                                        "src": "632:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage",
+                                            "typeString": "struct LocalContract.FUNDERS storage ref[] storage ref"
+                                        }
+                                    },
+                                    "functionReturnParameters": 48,
+                                    "id": 50,
+                                    "nodeType": "Return",
+                                    "src": "625:14:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "870603b8",
+                        "id": 52,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "Funders",
+                        "nameLocation": "556:7:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 43,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "564:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 48,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 47,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 52,
+                                    "src": "587:16:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_FUNDERS_$9_memory_ptr_$dyn_memory_ptr",
+                                        "typeString": "struct LocalContract.FUNDERS[]"
+                                    },
+                                    "typeName": {
+                                        "baseType": {
+                                            "id": 45,
+                                            "nodeType": "UserDefinedTypeName",
+                                            "pathNode": {
+                                                "id": 44,
+                                                "name": "FUNDERS",
+                                                "nameLocations": [
+                                                    "587:7:0"
+                                                ],
+                                                "nodeType": "IdentifierPath",
+                                                "referencedDeclaration": 9,
+                                                "src": "587:7:0"
+                                            },
+                                            "referencedDeclaration": 9,
+                                            "src": "587:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_FUNDERS_$9_storage_ptr",
+                                                "typeString": "struct LocalContract.FUNDERS"
+                                            }
+                                        },
+                                        "id": 46,
+                                        "nodeType": "ArrayTypeName",
+                                        "src": "587:9:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_FUNDERS_$9_storage_$dyn_storage_ptr",
+                                            "typeString": "struct LocalContract.FUNDERS[]"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "586:18:0"
+                        },
+                        "scope": 53,
+                        "src": "547:100:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 54,
+                "src": "27:631:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "0:658:0"
+    },
+    "functionHashes": {
+        "Funders()": "870603b8",
+        "PayMe(string)": "9ed492f2",
+        "funders(uint256)": "dc0d3dff",
+        "whoIsOwner()": "9ee1bd0f"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "324800",
+            "executionCost": "362",
+            "totalCost": "325162"
+        },
+        "external": {
+            "Funders()": "infinite",
+            "PayMe(string)": "infinite",
+            "funders(uint256)": "infinite",
+            "whoIsOwner()": "infinite"
+        }
+    }
+}
